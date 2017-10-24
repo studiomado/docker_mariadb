@@ -1,0 +1,9 @@
+CREATE DATABASE mydb;
+
+USE mydb;
+
+CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypassword';
+
+GRANT ALL PRIVILEGES ON mydb.* TO 'myuser'@'%' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
