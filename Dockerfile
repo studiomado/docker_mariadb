@@ -12,4 +12,4 @@ RUN yum -y update && yum install -y MariaDB-server MariaDB-client
 
 EXPOSE 3306
 
-ENTRYPOINT /etc/init.d/mysql start && bash
+ENTRYPOINT /etc/init.d/mysql start && chmod 755 /user/local/bin/create_mysql_user_and_database.sh && ./user/local/bin/create_mysql_user_and_database.sh && bash 
