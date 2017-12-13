@@ -1,8 +1,8 @@
-CREATE DATABASE mydb;
+CREATE DATABASE IF NOT EXISTS mydb;
 
 USE mydb;
 
-CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypassword';
+CREATE USER IF NOT EXISTS 'myuser'@'%' IDENTIFIED BY 'mypassword';
 
 GRANT ALL PRIVILEGES ON mydb.* TO 'myuser'@'%' WITH GRANT OPTION;
 
